@@ -1,0 +1,24 @@
+[project]
+name = "bitmap-to-vector"
+version = "0.1.0"
+description = "A small Python CLI for converting bitmap images to SVG paths."
+requires-python = ">=3.10"
+dependencies = [
+    "opencv-python",
+    "numpy",
+    "Pillow",
+    "svgwrite",
+    "scikit-learn",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q -p no:capture -p no:debugging"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
